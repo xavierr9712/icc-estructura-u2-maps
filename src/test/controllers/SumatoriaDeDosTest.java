@@ -1,3 +1,5 @@
+package test.controllers;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
@@ -9,15 +11,15 @@ public class SumatoriaDeDosTest {
 
     @Test
     void testSolucionExiste() {
-        int[] nums = {9,2,3,6};
+        int[] nums = { 9, 2, 3, 6 };
         int[] resultado = ejercicios.sumatoriaDeDos(nums, 5);
         assertNotNull(resultado);
-        assertArrayEquals(new int[]{1,2}, resultado);
+        assertArrayEquals(new int[] { 1, 2 }, resultado);
     }
 
     @Test
     void testSinSolucion() {
-        int[] nums = {9,2,3,6};
+        int[] nums = { 9, 2, 3, 6 };
         assertNull(ejercicios.sumatoriaDeDos(nums, 10));
     }
 }
