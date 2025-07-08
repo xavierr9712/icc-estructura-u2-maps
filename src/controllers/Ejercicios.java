@@ -50,4 +50,28 @@ public class Ejercicios {
     public int[] sumatoriaDeDos(int[] nums, int objetivo) {
         throw new UnsupportedOperationException("Not implemented yet");
     }
+
+    /**
+     * Cuenta la frecuencia de cada caracter en la cadena recibida y
+     * muestra el resultado por consola.
+     *
+     * Ejemplo:
+     * Input: "hola"
+     * Output: {h=1, o=1, l=1, a=1}
+     */
+    public void contarCaracteres(String texto) {
+        throw new UnsupportedOperationException("Not implemented yet");
+    }
+
+    /**
+     * Verifica si dos palabras son anagramas.
+     * Deben contener las mismas letras con la misma frecuencia.
+     *
+     * Ejemplo:
+     * Input: palabra1 = "roma", palabra2 = "amor"
+     * Output: true
+     */
+    public boolean sonAnagramas(String palabra1, String palabra2) {
+        throw new UnsupportedOperationException("Not implemented yet");
+    }
 }
