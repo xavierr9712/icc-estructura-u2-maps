@@ -1,5 +1,10 @@
+import java.util.TreeMap;
+
 import controllers.Ejercicios;
 import controllers.EmpleadoContoller;
+import controllers.EmpleadoDAO;
+import controllers.EmpleadoDAOHashMap;
+import controllers.EmpleadoDAOTreeMap;
 import controllers.Mapa;
 
 import models.Empleado;
@@ -20,20 +25,50 @@ public class App {
     }
 
     private static void runMapExamlpe() {
-        Mapa mapa = new Mapa();
-        mapa.runHashMap();
-        mapa.runLinkedHashMap();
-        mapa.runTreeMap();
-        mapa.runHashMapObj();
-        mapa.runTreeMapObj();
+        // Mapa mapa = new Mapa();
+        // mapa.runHashMap();
+        // mapa.runLinkedHashMap();
+        // mapa.runTreeMap();
+        // mapa.runHashMapObj();
+        // mapa.runTreeMapObj();
     }
 
     private static void runEmpleadoExample() {
-        throw new UnsupportedOperationException("Not implemented yet");
+
+        
+        EmpleadoDAO empleadoDAOHash = new EmpleadoDAOHashMap();
+        EmpleadoContoller empleadoContollerHash = new EmpleadoContoller(empleadoDAOHash);
+
+
+        EmpleadoDAO empleadoDAOTree = new EmpleadoDAOTreeMap();
+        EmpleadoContoller empleadoContollerTree = new EmpleadoContoller(empleadoDAOTree);
+
+        
+        Empleado emp1 = new Empleado(4, "Pedro", "DEV");
+        Empleado emp2 = new Empleado(2, "Pedro", "DEV");
+        Empleado emp3 = new Empleado(5, "Juan", "DEV");
+        Empleado emp4 = new Empleado(3, "Maria", "DEV");
+        Empleado emp5 = new Empleado(1, "Juan", "DEV");
+
+        System.out.println("HashMap");
+
+        empleadoContollerHash.agregarEmpleado(emp1);
+        empleadoContollerHash.agregarEmpleado(emp2);
+        empleadoContollerHash.agregarEmpleado(emp3);
+        empleadoContollerHash.agregarEmpleado(emp4);
+        empleadoContollerHash.agregarEmpleado(emp5);
+
+        System.out.println("TreeMap");
+        empleadoContollerTree.agregarEmpleado(emp1);
+        empleadoContollerTree.agregarEmpleado(emp2);
+        empleadoContollerTree.agregarEmpleado(emp3);
+        empleadoContollerTree.agregarEmpleado(emp4);
+        empleadoContollerTree.agregarEmpleado(emp5);
+
+
     }
 
     private static void runEjerccios() {
-        throw new UnsupportedOperationException("Not implemented yet");
 
     }
 }
