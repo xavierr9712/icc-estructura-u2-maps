@@ -23,8 +23,8 @@ public class EmpleadoDAOTreeMap  implements EmpleadoDAO {
 
     @Override
     public void list() {
-         for (Empleado  emp : empleados.values()){
-             System.out.println(emp);     
+        for (Empleado  emp : empleados.values()){
+            System.out.println(emp);     
 
 
         }

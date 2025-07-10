@@ -7,7 +7,7 @@ import models.Empleado;
 
 public class EmpleadoContoller {
 
-    private EmpleadoDAO empleadoDAO;
+    EmpleadoDAO empleadoDAO;
 
     public  EmpleadoContoller(EmpleadoDAO empleadoDAO){
         this.empleadoDAO = empleadoDAO;

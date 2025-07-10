@@ -15,10 +15,10 @@ public class App {
         System.out.println("----Practica Mapas----");
         System.out.println("Nombre: Xavier Ortega"); /// Cambiar por su nombre
         // Ejecuta el ejemplo de uso de HashMap con ejemplos sencillos
-        runMapExamlpe();
+        //runMapExamlpe();
 
         // // Ejecuta el ejemplo de gestión de empleados usando HashMap
-        // runEmpleadoExample();
+        runEmpleadoExample();
 
         // // Ejecuta los ejercicios de sumatoria y anagramas
         // runEjerccios();
@@ -48,7 +48,7 @@ public class App {
         Empleado emp2 = new Empleado(2, "Pedro", "DEV");
         Empleado emp3 = new Empleado(5, "Juan", "DEV");
         Empleado emp4 = new Empleado(3, "Maria", "DEV");
-        Empleado emp5 = new Empleado(1, "Juan", "DEV");
+        Empleado emp5 = new Empleado(1, "Juan", "DEV");     
 
         System.out.println("HashMap");
 
@@ -57,6 +57,9 @@ public class App {
         empleadoContollerHash.agregarEmpleado(emp3);
         empleadoContollerHash.agregarEmpleado(emp4);
         empleadoContollerHash.agregarEmpleado(emp5);
+        empleadoContollerHash.list();
+        empleadoContollerHash.remove(2);
+        empleadoContollerHash.list();
 
         System.out.println("TreeMap");
         empleadoContollerTree.agregarEmpleado(emp1);
@@ -64,6 +67,11 @@ public class App {
         empleadoContollerTree.agregarEmpleado(emp3);
         empleadoContollerTree.agregarEmpleado(emp4);
         empleadoContollerTree.agregarEmpleado(emp5);
+        empleadoContollerTree.list();
+        empleadoContollerTree.remove(2);
+        empleadoContollerTree.list();
+
+        
 
 
     }
