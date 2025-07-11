@@ -161,4 +161,4 @@ Para administrar un directorio telefónico sin claves duplicadas y ordenado por 
 
 ## runEjerccios()
 
-![alt text](image-2.png)SSS
+![alt text](image-2.png)
