@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.TreeMap;
 
 import controllers.Ejercicios;
@@ -15,13 +16,13 @@ public class App {
         System.out.println("----Practica Mapas----");
         System.out.println("Nombre: Xavier Ortega"); /// Cambiar por su nombre
         // Ejecuta el ejemplo de uso de HashMap con ejemplos sencillos
-        //runMapExamlpe();
+        runMapExamlpe();
 
         // // Ejecuta el ejemplo de gestión de empleados usando HashMap
         runEmpleadoExample();
 
         // // Ejecuta los ejercicios de sumatoria y anagramas
-        // runEjerccios();
+        runEjerccios();
     }
 
     private static void runMapExamlpe() {
@@ -78,5 +79,42 @@ public class App {
 
     private static void runEjerccios() {
 
+        Ejercicios ejercicios = new Ejercicios();
+
+        System.out.println("\n--- Ejercicios ---");
+
+        // Test sumatoriaDeDos
+        System.out.println("\n--- sumatoriaDeDos ---");
+        int[] nums1 = {9, 2, 3, 6};
+        int objetivo1 = 5;
+        int[] result1 = ejercicios.sumatoriaDeDos(nums1, objetivo1);
+        if (result1 != null) {
+            System.out.println("Input: nums = " + Arrays.toString(nums1) + ", objetivo = " + objetivo1 + " -> Output: [" + result1[0] + "," + result1[1] + "]");
+        } else {
+            System.out.println("Input: nums = " + Arrays.toString(nums1) + ", objetivo = " + objetivo1 + " -> Output: null");
+        }
+
+        int[] nums2 = {9, 2, 3, 6};
+        int objetivo2 = 10;
+        int[] result2 = ejercicios.sumatoriaDeDos(nums2, objetivo2);
+        if (result2 != null) {
+            System.out.println("Input: nums = " + Arrays.toString(nums2) + ", objetivo = " + objetivo2 + " -> Output: [" + result2[0] + "," + result2[1] + "]");
+        } else {
+            System.out.println("Input: nums = " + Arrays.toString(nums2) + ", objetivo = " + objetivo2 + " -> Output: null");
+        }
+
+        // Test contarCaracteres
+        System.out.println("\n--- contarCaracteres ---");
+        ejercicios.contarCaracteres("hola");
+        ejercicios.contarCaracteres("banana");
+
+        // Test areAnagrams and sonAnagramas
+        System.out.println("\n--- Anagramas ---");
+        System.out.println("listen, silent are anagrams: " + Ejercicios.areAnagrams("listen", "silent"));
+        System.out.println("hello, bello are anagrams: " + Ejercicios.areAnagrams("hello", "bello"));
+        System.out.println("triangle, integral are anagrams: " + Ejercicios.areAnagrams("triangle", "integral"));
+        System.out.println("roma, amor are anagrams (sonAnagramas): " + ejercicios.sonAnagramas("roma", "amor"));
     }
+
+    
 }
